@@ -16,6 +16,7 @@ def main():
 
     diff = compare_datasets(filepath1, filepath2, key_name)
     print(diff)
+    print(diff.to_json(orient='split'))
 
 if __name__ == "__main__":
     main()
