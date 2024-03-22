@@ -5,6 +5,8 @@ https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.comp
 
 ## Setup
 
+### Python version
+
 Tested with Python 3.12
 
 ```bash
@@ -18,7 +20,17 @@ pipenv sync
 pip install -r requirements.txt
 ```
 
+### Rust version
+
+Tested with Rust 1.76
+
+```bash
+cargo build --release
+```
+
 ## Usage
+
+### Python version
 
 `pipenv run python compare_datasets.py [path/file1.csv] [path/file2.csv] [id_key_name]`
 
@@ -33,4 +45,21 @@ Example:
 pipenv run python compare_datasets.py data/example1.csv data/example2.csv PassengerId
 # or
 python compare_datasets.py data/example1.csv data/example2.csv PassengerId
+```
+
+### Rust version
+
+`cargo run [path/file1.csv] [path/file2.csv]`
+
+or with the compiled binary
+
+`target/release/compare-datasets [path/file1.csv] [path/file2.csv]`
+
+
+Example:
+
+```bash
+cargo run data/example1.csv data/example2.csv
+# or
+target/release/compare-datasets data/example1.csv data/example2.csv
 ```
